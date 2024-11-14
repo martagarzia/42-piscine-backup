@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_value_write.c                                :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 17:17:38 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 17:47:40 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/14 17:34:12 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/14 17:49:52 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
 
-void	ft_putnbr(int n)
+void	ft_putnbr(int n)          //5
 {
-	char	c;
-
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);	
-	}
-	c = (n % 10) + '0';
-	write(1, &c, 1);
+	
 }
 
-int main(void)
-{
-	int	a;
-	int	*ptr;
 
-	a = 42;
-	ptr = &a;
-	ft_putnbr(*ptr);
-	write(1, "/n", 1);
-	return (0);
+int main(void)                    //1
+{
+	int a;                    //2
+
+	a = 42;                   //3
+	ptr = &a;                 //4
+
 }
