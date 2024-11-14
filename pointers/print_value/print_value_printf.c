@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ex1.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 14:42:22 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 15:48:02 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/14 17:01:07 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/14 17:10:54 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_ft(int *ptr)
+int main(void)
 {
-	*ptr = 42;
-}
+	int a;
+	int *ptr;
 
-int	main(void)
-{
-	int c;
-	int* ptr;
+	a  = 42;
+	ptr = &a;
 
-	c = 0;
-
-	ft_ft(&number);
-	printf("%d\n", number);
-	return (0);
+	printf("%d\n", *ptr);
 }
