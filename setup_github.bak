@@ -1,4 +1,4 @@
-1. CREATE SSH KEY
+1. CREATE SSH KEYYYYYYYYYYY
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
 2.ADD SSH KEY TO GITHUB 
