@@ -1,47 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 11:11:25 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 11:44:50 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/14 11:55:19 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/14 12:42:48 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_comb(void)
+void	ft_putchar(char c)
 {
-	int	a;
-	int	b;
-	int	c;
+	write(1, &c, 1);
+}
 
-	a = '0';
-	while(a <= '7')
+void	ft_print_n(int num)
+{
+	ft_putchar((num / 10) + '0');
+	ft_putchar((num % 10) + '0');
+}
+
+void	ft_print_comb2(void)
+{
+	int	n1;
+	int	n2;
+
+	n1 = 0;
+	while (n1 <= 98)
 	{
-		b = a + 1;
-		while(b <= '8')
+		n2 = n1 + 1;
+		while (n2 <= 99)
 		{
-			c = b + 1;
-			while(c <= '9')
+			ft_print_n(n1);
+			ft_putchar(' ');
+			ft_print_n (n2);
+			if (n1 != 98 || n2 != 99)
 			{
-				write(1, &a, 1);
-				write(1, &b, 1);
-				write(1, &c, 1);
-				if (!(a == '7'))
-					write(1, ", ", 2);
-				c++;
+				ft_putchar(',');
+				ft_putchar(' ');
 			}
-			b++;
+			n2++;
 		}
-		a++;
+		n1++;
 	}
 }
 
-int main(void)
+int	main(void)
 {
-	ft_print_comb();
-	return (0);
+	ft_print_comb2();
+	return(0);
 }

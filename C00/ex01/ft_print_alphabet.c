@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pointers_video_42.c                                :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 15:49:34 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 15:50:51 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/14 08:50:28 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/14 08:59:28 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(void)
+void	ft_print_alphabet(void)
 {
-	char	c;
-	char* ptr;
+	char	letter;
 
-	c = 'L';
-	ptr = &c;
-	write(1, &c, 1);
-	return (1);
+	letter = 'a';	
+	while (letter  <= 'z')
+	{
+		write(1, &letter, 1);
+		letter++;
+	}
+}
+
+int	main(void)
+{
+	ft_print_alphabet();
+	return (0);
 }

@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_value_write.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 17:17:38 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 17:47:40 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/14 14:05:54 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/14 14:24:25 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
+#include <limits.h>
 
-void	ft_putnbr(int n)
+void	ft_putchar(char c)
 {
-	char	c;
-
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);	
-	}
-	c = (n % 10) + '0';
 	write(1, &c, 1);
 }
 
-int main(void)
+void	ft_putnbr(int nb)
 {
-	int	a;
-	int	*ptr;
+	if (nb == INT_MIN)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+	}
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+	}
+	ft_putchar((nb % 10) + '0');
+}
 
-	a = 42;
-	ptr = &a;
-	ft_putnbr(*ptr);
-	write(1, "/n", 1);
+int	main(void)
+{
+	ft_putnbr(21);
 	return (0);
 }

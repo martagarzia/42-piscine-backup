@@ -19,8 +19,8 @@ void	ft_ft(int *ptr)
 
 int	main(void)
 {
-	int c;
-	int* ptr;
+	int	c;
+	int*	ptr;
 
 	c = 0;
 

@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex00_b.c                                           :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 08:29:49 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 08:29:51 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/14 10:32:43 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/14 10:46:47 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_is_negative(int n)
 {
-	write(1, &c, 1);
+	if (n < 0)
+	{
+		write(1, "N", 1);
+	}
+	else
+	{
+		write(1, "P", 1);
+	}
 }
 
-int main(void)
+int	main(void)
 {
-	ft_putchar('z');
+	ft_is_negative(-3);
 	return (0);
 }
