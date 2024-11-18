@@ -6,7 +6,7 @@
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 08:50:28 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 08:59:28 by mgarzia          ###   ########.fr       */
+/*   Updated: 2024/11/18 15:42:53 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_print_alphabet(void)
 {
 	char	letter;
 
-	letter = 'a';	
-	while (letter  <= 'z')
+	letter = 'a';
+	while (letter <= 'z')
 	{
 		write(1, &letter, 1);
 		letter++;

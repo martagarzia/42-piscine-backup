@@ -6,7 +6,7 @@
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:55:19 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 12:42:48 by mgarzia          ###   ########.fr       */
+/*   Updated: 2024/11/18 15:58:01 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ void	ft_print_comb2(void)
 int	main(void)
 {
 	ft_print_comb2();
-	return(0);
+	return (0);
 }

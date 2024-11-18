@@ -6,7 +6,7 @@
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:11:25 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 11:44:50 by mgarzia          ###   ########.fr       */
+/*   Updated: 2024/11/18 15:55:26 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	ft_print_comb(void)
 	int	c;
 
 	a = '0';
-	while(a <= '7')
+	while (a <= '7')
 	{
 		b = a + 1;
-		while(b <= '8')
+		while (b <= '8')
 		{
 			c = b + 1;
-			while(c <= '9')
+			while (c <= '9')
 			{
 				write(1, &a, 1);
 				write(1, &b, 1);
