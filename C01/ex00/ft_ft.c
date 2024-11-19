@@ -5,26 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 14:42:22 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/14 15:48:02 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/19 14:10:04 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/19 14:17:16 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_ft(int *ptr)
+void	ft_ft(int *nbr)
 {
-	*ptr = 42;
+	*nbr = 42;
 }
-
+/*
 int	main(void)
 {
-	int	c;
-	int*	ptr;
+	int	*nbr;
+	int	number;
 
-	c = 0;
-
-	ft_ft(&number);
-	printf("%d\n", number);
-	return (0);
+	nbr = &number;
+	ft_ft(nbr);
+	printf("%d", number);
 }
+*/
