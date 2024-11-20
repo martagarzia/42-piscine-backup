@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 14:10:04 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/20 12:49:02 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/20 13:09:53 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/20 15:43:22 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_ft(int *nbr)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*nbr = 42;
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 }
 /*
 int	main(void)
 {
-	int	*nbr;
-	int	number;
+	int	a;
+	int	b;
+	int	div;
+	int	mod;
 
-	nbr = &number;
-	ft_ft(nbr);
-	printf("%d", number);
+	a = 15;
+	b = 2;
+	ft_div_mod(a, b, &div, &mod);
+	printf("division: %d, remainder: %d\n", div, mod);
+	return (0);
 }
 */

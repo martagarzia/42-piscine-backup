@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 14:10:04 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/20 12:49:02 by mgarzia          ###   ########.fr       */
+/*   Created: 2024/11/20 15:53:18 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/20 15:59:05 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_ft(int *nbr)
-{
-	*nbr = 42;
+void ft_putstr(char *str) {
+    while (*str) {
+        write(1, str, 1);
+        str++;
+    }
 }
-/*
-int	main(void)
-{
-	int	*nbr;
-	int	number;
 
-	nbr = &number;
-	ft_ft(nbr);
-	printf("%d", number);
+int main() {
+    char *testString = "Dolphins are cool";
+    ft_putstr(testString);
+    write(1, "\n", 1);
+    return 0;
 }
-*/
