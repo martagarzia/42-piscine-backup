@@ -12,16 +12,23 @@
 
 #include <unistd.h>
 
-void ft_putstr(char *str) {
-    while (*str) {
-        write(1, str, 1);
-        str++;
+void ft_putstr(char *str)
+{
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+        write(1, &str[i], 1);
+        i++;
     }
 }
 
-int main() {
-    char *testString = "Dolphins are cool";
-    ft_putstr(testString);
-    write(1, "\n", 1);
-    return 0;
+int main(void)
+{
+    char *test_string;
+
+    test_string = "Dolphins are cool";
+    ft_putstr(test_string);
+    return (0);
 }
