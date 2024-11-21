@@ -6,7 +6,7 @@
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 13:06:59 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/21 14:35:18 by mgarzia          ###   ########.fr       */
+/*   Updated: 2024/11/21 14:40:04 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = c;
 }
-
+/*
 int	main(void)
 {
 	int	x;
@@ -33,3 +33,4 @@ int	main(void)
 	printf("x = %d, y = %d\n", x, y);
 	return (0);
 }
+*/
