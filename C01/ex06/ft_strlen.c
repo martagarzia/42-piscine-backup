@@ -11,7 +11,7 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
-/*
+
 int	main(void)
 {
 	char	str[] = "dolphin";
@@ -21,4 +21,3 @@ int	main(void)
 	printf("%d\n", length);
 	return (0);
 }
-*/
