@@ -6,7 +6,7 @@
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 18:30:48 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/23 18:30:56 by mgarzia          ###   ########.fr       */
+/*   Updated: 2024/11/24 17:47:53 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
-	char	src[] = "Dolphins are cool";
+	char	*src;
 	char	dest[20];
-	
+
+	src = "Dolphins are cool";
 	ft_strncpy(dest, src, 17);
-	printf("%s\n", dest);
+	printf("%s", dest);
 	return (0);
 }
+*/

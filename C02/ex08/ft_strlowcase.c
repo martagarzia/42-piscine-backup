@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/25 12:03:04 by mgarzia           #+#    #+#             */
+/*   Updated: 2024/11/25 12:04:22 by mgarzia          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
 char	*ft_strlowcase(char *str)
@@ -15,7 +27,7 @@ char	*ft_strlowcase(char *str)
 	}
 	return (str);
 }
-
+/*
 int	main(void)
 {
 	char	str[] = "DOLPHINS ARE COOL";
@@ -24,3 +36,4 @@ int	main(void)
 	printf("%s\n", str);
 	return (0);
 }
+*/
