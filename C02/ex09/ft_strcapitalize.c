@@ -6,69 +6,50 @@
 /*   By: mgarzia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:10:17 by mgarzia           #+#    #+#             */
-/*   Updated: 2024/11/25 12:26:53 by mgarzia          ###   ########.fr       */
+/*   Updated: 2024/11/25 14:48:03 by mgarzia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/*
+48 - 57 = numbers
+65 - 90 = capital letters
+97 - 122 = lowercase letters
+*/
+
 #include <stdio.h>
 
-int	is_lowercase(char *c, int *first_letter)
+char    *ft_strcapitalize(char *str)
 {
-	if (*c >= 'a' && *c <= 'z')
-	{
-		if (*first_letter == 1)
-			*c = *c - 32;
-		*first_letter = 0;
-		return (1);
-	}
-	return (0);
+        int     i;
+
+        i = 0;
+        while (str[i] != '\0')
+        {
+                if (str[i] >= 65 && str[i] <= 90)
+                        str[i] = str[i] + 32;
+                i++;
+        }
+
+        i = 0;
+        while (str[i] != '\0')
+        {
+                if (i == 0 || !((str[i - 1] >= 48 && str[i - 1] <= 57) ||
+                                (str[i - 1] >= 65 && str[i - 1] <= 90) ||
+                                (str[i - 1] >= 97 && str[i - 1] <= 122)))
+                {
+                        if (str[i] >= 97 && str[i] <= 122)
+                                str[i] = str[i] - 32;
+                }
+                i++;
+        }
+        return (str);
 }
 
-int	is_uppercase(char *c, int *first_letter)
+int     main(void)
 {
-	if (*c >= 'A' && *c <= 'Z')
-	{
-		if (*first_letter == 0)
-			*c = *c + 32;
-		*first_letter = 0;
-		return (1);
-	}
-	return (0);
+        char    str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+
+        printf("%s", (ft_strcapitalize(str)));
+        return 0;
 }
 
-int	is_digit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
-
-char	*ft_strcapitalize(char *str)
-{
-	int	i;
-	int	first_letter;
-
-	i = 0;
-	first_letter = 1;
-	while (str[i] != '\0')
-	{
-		if (!is_lowercase(&str[i], &first_letter)
-			&& !is_uppercase(&str[i], &first_letter))
-		{
-			if (!is_digit(str[i]))
-				first_letter = 1;
-			else
-				first_letter = 0;
-		}
-		i++;
-	}
-	return (str);
-}
-
-int	main(void)
-{
-	char	str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
-
-	ft_strcapitalize(str);
-	printf("%s", str);
-	return (0);
-}
